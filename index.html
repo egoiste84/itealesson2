@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <title>Anastasiya Zayarskaya | Photography</title>
+    <link rel="shortcut icon" href="images/logo_2.png" type="image/png" />
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            width: 100%;
+            position: fixed;
+            z-index: 99998;
+            background-color: black;
+        }
+
+        .name {
+            font-family: Lombok;
+            text-transform: uppercase;
+            font-size: 3vh;
+            position: fixed;
+            left: 0.6vw;
+            color: azure;
+            top: -2vh;
+        }
+
+        .links {
+            width: 30%;
+            right: 0;
+            height: 10vh;
+            position: fixed;
+            align-content: flex-end;
+            top: 1vh;
+            z-index: 100;
+        }
+
+            .links a {
+                font-family: 'Abel', sans-serif;
+                font-size: 3vh;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: azure;
+                margin-left: 10px;
+                transition: 2s;
+                cursor: pointer;
+            }
+
+                .links a:hover {
+                    opacity: 0.6;
+                    transition: 1.5s;
+                    color: white;
+                    cursor: pointer;
+                }
+
+        #hellopreloader_preload {
+            display: block;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-width: 1000px;
+            background: #000000 center center no-repeat;
+            background-size: 200px;
+            background-image: url(images/preload_2.gif);
+        }
+
+        .footer {
+            width: 100%;
+            background-color: black;
+            height: 50px;
+            display: flex;
+            bottom: 0;
+            justify-content: flex-start;
+            position: fixed;
+            vertical-align: middle;
+            left:-0.4vw;
+        }
+
+            .footer a {
+                outline: none;
+            }
+
+        .soc_img {
+            width: 30px;
+            height: 30px;
+            bottom: 1vh;
+            margin-left: 1vw;
+            margin-top: 10px;
+            
+        }
+
+        .slider {
+            position: relative;
+            height: 88vh;
+            overflow: hidden;
+            margin: 6vh auto;
+            width: 100%;
+            z-index: 9999;
+        }
+
+            .slider > img {
+                position: absolute;
+                left: 10%;
+                top: -65px;
+                transition: all 1.5s;
+                width: 80%;
+                height: 110%;
+                background-size:cover;
+            }
+            .slider > img:hover {
+                cursor:pointer;
+            }
+            .slider input[name='slide_switch'] {
+                display: none;
+                z-index: 90;
+                position: relative;
+            }
+
+            .slider label {
+                margin-top: 20px;
+                position: relative;
+                float: none;
+                cursor: pointer;
+                transition: all 1.5s;
+                left: 0.6vw;
+                width: 8vw;
+                height: 10vh;
+                display: block;
+                opacity: 0.4;
+                top:-20px;
+            }
+
+            .slider input[name='slide_switch']:checked + label {
+                border-color: #666;
+                opacity: 1;
+            }
+
+            .slider input[name='slide_switch'] ~ img {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+
+            .slider input[name='slide_switch']:checked + label + img {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        label img {
+            width: 8vw;
+            height: 10vh;
+            border:3px solid azure;
+        }
+
+        label {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload">
+        </div>
+    </div>
+    <div class="header">
+        <p class="name">anastasiya zayarskaya</p>
+        <div class="links">
+            <a href="#">home</a>
+            <a href="#">portrait</a>
+            <a href="#">nude</a>
+            <a href="#">lovestory</a>
+        </div>
+    </div>
+    <div class="slider">
+        <input type="radio" name="slide_switch" id="id1" checked="checked" />
+        <label for="id1">
+            <img src="images/thumbs/-13(2)th_thumb.png" />
+        </label>
+        <img src="images/large/-13(2)_large.jpg" />
+        <input type="radio" name="slide_switch" id="id2" />
+        <label for="id2">
+            <img src="images/thumbs/-5th_thumb.png" />
+        </label>
+        <img src="images/large/-5_large.jpg" />
+        <input type="radio" name="slide_switch" id="id3" />
+        <label for="id3">
+            <img src="images/thumbs/-15th_thumb.png" />
+        </label>
+        <img src="images/large/-15_large.jpg" />
+
+        <input type="radio" name="slide_switch" id="id4" />
+        <label for="id4">
+            <img src="images/thumbs/-9th_thumb.png" />
+        </label>
+        <img src="images/large/-9_large.jpg" />
+
+        <input type="radio" name="slide_switch" id="id5" />
+        <label for="id5">
+            <img src="images/thumbs/-17_thumb.png"  />
+        </label>
+        <img src="images/large/-17_large.jpg"/>
+        <input type="radio" name="slide_switch" id="id6" />
+        <label for="id6">
+            <img src="images/thumbs/-10_thumb.png" />
+        </label>
+        <img src="images/large/-10_large.jpg" />
+        <input type="radio" name="slide_switch" id="id7" />
+        <label for="id7">
+            <img src="images/thumbs/-15(2)_thumb.png" />
+        </label>
+        <img src="images/large/-15(2)_large.jpg" />
+    </div>
+    <div class="footer">
+        <a target="_blank" href="https://www.facebook.com/anastasia.zayarskaya?fref=ts" title="Facebook">
+            <img src="images/facebook-white.png" class="soc_img" style="width:35px; height:35px; margin-top:7.5px" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/anastasiazayarskaya/" title="Instagram">
+            <img src="images/menu-icon-instagram.png" class="soc_img" style="left:4.5%" />
+        </a>
+        <a href="mailto:asya.zayarskaya@gmail.com?subject=Вопросы и запись" title="Mail">
+            <img src="images/icon_email.png" class="soc_img" style="width:35px; height:38px; margin-top:6.5px" />
+        </a>
+    </div>
+    <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) { clearInterval(interhellopreloader); hellopreloader.style.display = "none"; }
+            }, 16);
+        } window.onload = function ()
+        { setTimeout(function () { fadeOutnojquery(hellopreloader); }, 3000); };
+    </script>
+</body>
+</html>

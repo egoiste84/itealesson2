@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  ubuntu:
+    image: deniszayarsky/itealesson2:v1
+    restart: always
+    environment:
+      TEXT: "Ubuntu docker image"
+    ports:
+      - 81:8080
